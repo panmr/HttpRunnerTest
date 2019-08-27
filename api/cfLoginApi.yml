@@ -1,0 +1,8 @@
+name: login cf admin
+request:
+    data:
+        username: ${ENV(cf_username)}
+        password: ${ENV(cf_password)}
+
+    url: https://d02-staging.vacd.biz/api/v1/auth/login
+    method: POST

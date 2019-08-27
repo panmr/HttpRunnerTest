@@ -1,0 +1,12 @@
+- config:
+    name: "login cf admin"
+
+- test:
+    name: login test
+    api: api/cfLoginApi.yml
+
+    validate:
+        - eq: ["status_code", 200]
+        - eq: ["content.user.userId", 48096]
+
+
