@@ -1,0 +1,10 @@
+name: login salesforce
+request:
+    data:
+        password: ${ENV(sf_password)}
+        username: ${ENV(sf_username)}
+        grant_type: password
+        client_id: ${ENV(sf_client_id)}
+        client_secret: ${ENV(sf_client_secret)}
+    url: https://login.salesforce.com/services/oauth2/token
+    method: POST

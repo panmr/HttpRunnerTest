@@ -1,0 +1,12 @@
+- config:
+    name: "login salesforce"
+
+- test:
+    name: login test
+    api: api/salesforceLoginApi.yml
+
+    validate:
+        - eq: ["status_code", 200]
+        - eq: ["content.id", https://login.salesforce.com/id/00D1N000001S7xJUAS/0051N0000058oq0QAA]
+
+
