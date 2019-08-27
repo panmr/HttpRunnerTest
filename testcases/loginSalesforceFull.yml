@@ -7,7 +7,7 @@ teststeps:
         data:
             password: RNG94405@
             stayLoggedIn: 'false'
-            username: ${ENV(username)}
+            username: integration.developer@ringcentral.com
             grant_type: password
             client_id: 3MVG9mclR62wycM2_CfiJ0SjGCPMjnsjPrWs4ts6YMh2h69Lw2JNn34xp8y3AHc_XA0BeaHRy3pSRYTLP2UaR
             client_secret: 8545819675365360261
