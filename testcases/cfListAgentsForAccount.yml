@@ -1,0 +1,24 @@
+- config:
+    name: "List all agents for an account"
+    variables: 
+      token: "xx"
+    output:
+      - token
+
+- test:
+    name: get token
+    api: api/cfLoginApi.yml
+    extract:
+      - token: content.authToken
+
+    validate:
+        - eq: ["status_code", 200]
+        - eq: ["content.user.userId", 48096]
+
+- test:
+    name: get all agents list
+    api: api/cfListAgents.yml
+
+    validate:
+        - eq: ["status_code", 200]
+        - contains: [{"agentId": "1539963,1554304,1554307"},"agentId"]

@@ -1,0 +1,10 @@
+name: list all agents for an account
+request:
+    headers:
+        X-Auth-Token: $token
+
+    url: https://d02-staging.vacd.biz/api/v1/admin/accounts/${ENV(cf_accountId)}/agentGroups/${ENV(cf_agentGroupId)}/agents
+    method: GET
+
+validate:
+    - eq: ["status_code", 200]
