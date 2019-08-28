@@ -1,9 +1,10 @@
 # HttpRunnerTest
 
-![image](https://images.app.goo.gl/3J4bha2t1RpmrEX86)
+![image](http://teks.co.in/site/blog/wp-content/uploads/2016/10/19_Api_testing.jpg)
 
-About how to enable Charles and set capture enviromment
+
+1. About how to enable Charles and set capture enviromment
 https://wiki.ringcentral.com/display/XTO/How+to+enable+Charles+proxy+and+set+env+for+mac
 
-About HttpRunner guidance
+2. About HttpRunner guidance
 https://cn.httprunner.org/quickstart/
