@@ -17,7 +17,7 @@
 
 - test:
     name: get all agents list
-    api: api/cfListAgents.yml
+    api: api/cfListAgentsApi.yml
 
     validate:
         - eq: ["status_code", 200]

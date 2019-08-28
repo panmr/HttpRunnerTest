@@ -1,0 +1,16 @@
+name: add new state for an account
+request:
+    headers:
+        X-Auth-Token: $token
+    json:
+        agentAuxState: milk
+        baseAgentState:
+            colKey: LUNCH
+            colLabel: Lunch
+            id: 11
+        isActive: true
+        isAgentSelectable: true
+        isRequired: false
+        rank: 10
+    url: https://d02-staging.vacd.biz/api/v1/admin/accounts/${ENV(cf_accountId)}/auxStates
+    method: POST

@@ -1,0 +1,31 @@
+- config:
+    name: "check add new state for an account successfully"
+    variables: 
+      token: "xx"
+    output:
+      - token
+
+- test:
+    name: get token
+    api: api/cfLoginApi.yml
+    extract:
+      - token: content.authToken
+
+    validate:
+        - eq: ["status_code", 200]
+        - eq: ["content.user.userId", 48096]
+
+- test:
+    name: add milk state for account
+    api: api/cfAddNewStateForAccountApi.yml
+
+    validate:
+        - eq: ["status_code", 200]
+        - eq: ["content.agentAuxState", milk]
+
+- test:
+    name: check state add successfully
+    api: api/cfListAgentsApi.yml
+
+    validate:
+        - contains: [{"agentAuxState": milk},"agentAuxState"]
