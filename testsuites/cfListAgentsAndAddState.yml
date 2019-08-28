@@ -1,0 +1,13 @@
+
+config:
+    name: "testsuite for list agents and add new state"
+
+testcases:
+-
+    name: test list all agents for an account
+    testcase: testcases/cfListAgentsForAccount.yml
+    
+-
+    name: check add state for account successfully
+    testcase: testcases/cfAddNewStateForAccount.yml
+    
