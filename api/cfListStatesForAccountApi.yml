@@ -3,7 +3,7 @@ request:
     headers:
         X-Auth-Token: $token
 
-    url: https://d02-staging.vacd.biz/api/v1/admin/accounts/{{accountId}}/auxStates
+    url: https://d02-staging.vacd.biz/api/v1/admin/accounts/${ENV(cf_accountId)}/auxStates
     method: GET
 
 
